@@ -19,9 +19,23 @@ public class AppTest
     }
 
     @Test
-    public void testGetHello() {
-        App ap = new App();
+    public void testCompareWords() {
 
-        assert("Hello World!!".equals(ap.getHello()));
+        // TO TEST OBJECT EQUALITY
+        App app = new App(){};
+
+        assertEquals("True", app.compareWords("hello", "hello"));
     }
+
+    @Test
+    public void testCompareIden() {
+
+        // TO TEST OBJECT IDENTITY
+        App app = new App(){};
+
+        assertSame("True", app.compareIden("test", "test"));
+        assertNotSame("False", app.compareIden("test", "test"));
+    }
+
+
 }
