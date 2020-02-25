@@ -1,5 +1,7 @@
 package za.ac.cput;
 
+import static org.junit.Assert.fail;
+
 /**
  * Hello world!
  *
@@ -23,4 +25,18 @@ public class App
             return "False";
         }
     }
+
+    // TO: DELIBERATELY FAILING A TEST
+    public int largestVal(final int[] list) {
+        int index, max = Integer.MAX_VALUE;
+        for (index = 0; index < list.length - 1; index++) {
+            if (list[index] > max) {
+                max = list[index];
+            }
+        }
+        return max;
+    }
+
+
+
 }

@@ -4,14 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-/**
- * Unit test for simple App.
- */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -35,6 +30,18 @@ public class AppTest
 
         assertSame("True", app.compareIden("test", "test"));
         assertNotSame("False", app.compareIden("test", "test"));
+    }
+
+    @Test
+    public void largestValTest() {
+        try {
+            App app = new App(){};
+
+            app.largestVal(new int[] {});
+            fail("Should have thrown an exception");
+        } catch (final RuntimeException e) {
+            assertTrue(true);
+        }
     }
 
 
