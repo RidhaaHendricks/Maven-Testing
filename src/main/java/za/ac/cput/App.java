@@ -1,5 +1,7 @@
 package za.ac.cput;
 
+import org.junit.Test;
+
 import static org.junit.Assert.fail;
 
 /**
@@ -37,6 +39,10 @@ public class App
         return max;
     }
 
-
+    // TO TEST USING TIMEOUT
+    public int WithTimeout(){
+        final int factOf = 1 + (int) (30000 * Math.random());
+        return factOf;
+    }
 
 }

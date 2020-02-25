@@ -2,6 +2,7 @@ package za.ac.cput;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AppTest 
@@ -44,5 +45,22 @@ public class AppTest
         }
     }
 
+    // TO TEST USING TIMEOUT
+    @Test (timeout = 3)
+    public void testWithTimeout() {
+        System.out.println(" * UtilsJUnit4Test:test method 2 − testWithTimeout( )") ;
+        App app = new App(){};
+        app.WithTimeout();
+        System.out.printf("Computing %d!%n", app.WithTimeout());
+    }
 
+    // TO DISABLE A TEST
+    @Ignore
+    @Test (timeout = 3)
+    public void disableTestWithTimeout() {
+        System.out.println(" * UtilsJUnit4Test:test method 2 − testWithTimeout( )") ;
+        App app = new App(){};
+        app.WithTimeout();
+        System.out.printf("Computing %d!%n", app.WithTimeout());
+    }
 }
